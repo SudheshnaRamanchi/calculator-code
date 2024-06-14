@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+  
+
+  
+
+  *{
+    box-sizing: border-box;
+    color: antiquewhite;
+    justify-content:center;
+    
+  }
+  .container{
+
+
+  
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: aliceblue;
+
+    
+
+  }
+  .calculater{
+    background-color: rgb(13, 13, 13);
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(244, 236, 236);
+    box-shadow:5px 5px -15px 20px ;
+    text-align: center;
+
+  }
+  .calculater form input{
+
+    border: 0;
+    outline: 0;
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: -4px -5px 9px -5px;
+    background-color: transparent;
+    color: rgb(245, 235, 235);
+    cursor: pointer;
+    margin: 15px;
+  }
+   form.screen{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+
+  }
+  form .screen input{
+    text-align: right;
+    flex: 1;
+    font-size: 40px;
+    box-shadow: none;
+    width: 300px;
+    height: 80px;
+    box-shadow: 1px -1px 5px ;
+  }
+
+ 
+ 
+  
+
+
+</style>
+<body>
+
+<div class="container">
+<div class="calculater">
+
+    <h2>CALCULATOR </h2>
+    <form>
+
+<div class="screen">
+    <input type="text" class id="screen">
+</div> 
+
+<div>
+       
+<input type="reset" onclick="demo('reset')" >
+<input type="button" value="," onclick="demo(',')" >
+<input type="button" value="/" onclick="demo('/')">
+<input type="button" value="%" onclick="demo('%')">
+ 
+<br>
+<input type="button" value="1" onclick="demo(1)">
+<input type="button" value="2" onclick="demo(2)">
+<input type="button" value="3" onclick="demo(3)">
+<input type="button" value="+" onclick="demo('+')">
+<br>
+<input type="button" value="4" onclick="demo(4)">
+<input type="button" value="5" onclick="demo(5)">
+<input type="button" value="6" onclick="demo(6)">
+<input type="button" value="_" onclick="demo('-')">
+<br>
+<input type="button" value="7" onclick="demo(7)">
+<input type="button" value="8" onclick="demo(8)">
+<input type="button" value="9" onclick="demo(9)">
+<input type="button" value="*" onclick="demo('*')">
+<br>
+<input type="button" value="0" onclick="demo(0)">
+<input type="button" value="00" onclick="demo('00')">
+<input type="button" value="." onclick="demo('.')">
+<input type="button" value="=" onclick="demo1()">
+<br>
+</div>
+
+<br>
+
+</form>
+</div>
+</div>
+</div>
+
+<script>
+function demo(num){
+    document.getElementById('screen').value+=num
+}
+    function demo1(){
+     document.getElementById('screen').value=
+     eval(document.getElementById('screen').value)
+
+}
+
+
+</script>
+
+</body>
+</html>
